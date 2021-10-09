@@ -8,6 +8,7 @@ public class run {
         for (int i = 0; i <= 20; i++) {
             System.out.print("-");
         }
+        // show menu
         System.out.println();
         System.out.println("""
                 1. Add Vaccine
@@ -23,6 +24,7 @@ public class run {
         int selectedOption = sc.nextInt();
         switch (selectedOption) {
             case 1:
+                // vaccine Addition
 
                 Add_Vaccine ac = new Add_Vaccine();
                 String vaccineName = ac.vaccineName();
@@ -33,6 +35,17 @@ public class run {
                         + "," + "Gap Between Doses :" + gap);
 
             case 2:
+                // hospital Registration
+
+                Register_Hospital regH = new Register_Hospital();
+                String hName = regH.hospitalName();
+                int hPincode = regH.hospitalPincode();
+
+                System.out.println("Hospital Name :" + hName + "," + "Hospital Pincode :" + hPincode + ","
+                        + "Unique ID :" + hUniqueId);
+
+            case 3:
+                // Register Citizen
 
         }
 
