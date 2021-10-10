@@ -20,36 +20,53 @@ public class run {
                 7. Check Vaccination Status
                 8. Exit
                 """);
+
         Scanner sc = new Scanner(System.in);
-        int selectedOption = sc.nextInt();
-        switch (selectedOption) {
-            case 1:
-                // vaccine Addition
+        Integer selectedOption = 0;
 
-                Add_Vaccine ac = new Add_Vaccine();
-                String vaccineName = ac.vaccineName();
-                int totalDosesRequired = ac.totalDosesRequired();
-                int gap = ac.gapBetweenDoses();
+        while (selectedOption != 8) {
+            selectedOption = sc.nextInt();
 
-                System.out.println("Vaccine Name :" + vaccineName + "," + "Toal Doses Required :" + totalDosesRequired
-                        + "," + "Gap Between Doses :" + gap);
+            switch (selectedOption) {
 
-            case 2:
-                // hospital Registration
+                case 1:
+                    // vaccine Addition
 
-                Register_Hospital regH = new Register_Hospital();
-                String hName = regH.hospitalName();
-                int hPincode = regH.hospitalPincode();
+                    Add_Vaccine ac = new Add_Vaccine();
 
-                System.out.println("Hospital Name :" + hName + "," + "Hospital Pincode :" + hPincode + ","
-                        + "Unique ID :" + hUniqueId);
+                    ac.vaccineName();
+                    ac.gapBetweenDoses();
+                    ac.totalDosesRequired();
+                    System.out.println("Vaccine Name : " + ac.vaccineDetails.get("Vaccine Name") + ","
+                            + " Number of doses : " + ac.dosesDetails.get("Number of doses") + ","
+                            + " Gap Between doses : " + ac.dosesDetails.get("Gap between doses"));
+                    break;
 
-            case 3:
-                // Register Citizen
+                case 2:
+                    // hospital Registration
+
+                    // Register_Hospital regH = new Register_Hospital();
+                    // String hName = regH.hospitalName();
+                    // int hPincode = regH.hospitalPincode();
+
+                    // System.out.println("Hospital Name :" + hName + "," + "Hospital Pincode :" +
+                    // hPincode + ","
+                    // + "Unique ID :" + hUniqueId);
+
+                case 8:
+
+                    System.out.print("Exiting COVIN Programme..................");
+                    break;
+
+                default:
+                    System.out.println(" Wrong Choice...........");
+                    System.out.println("Re-enter Your choice--------");
+                    break;
+
+            }
 
         }
-
-        // sc.close();
+        sc.close();
     }
 
 }
