@@ -13,6 +13,7 @@ public class Register_Citizen {
     Scanner sc = new Scanner(System.in);
     static HashMap<String, String> cName = new HashMap<>();
     static HashMap<String, Long> cDetails = new HashMap<>();
+    static HashMap<Long, String> UUID = new HashMap<>();
 
     void addCitizenName() {
         for (i = 0; i <= cName.size(); i++) {
@@ -36,6 +37,7 @@ public class Register_Citizen {
 
         mapCitizenID = mapCitizenName + "ID";
         cDetails.put(mapCitizenID, citizenID);
+        UUID.put(citizenID, citizenName);
     }
 
     void addCitizenAge() {
