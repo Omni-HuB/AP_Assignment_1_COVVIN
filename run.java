@@ -86,6 +86,12 @@ public class run {
 
                 case 5:
                     // booking a slot
+                    Book_a_slot.main(args);
+                case 6:
+
+                    Slots_Available showslots = new Slots_Available();
+                    showslots.showSlots();
+                    break;
 
                 case 8:
 

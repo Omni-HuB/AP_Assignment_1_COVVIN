@@ -6,14 +6,6 @@ public class Book_a_slot {
     static Long uniqueID;
     static Scanner sc = new Scanner(System.in);
 
-    void searchByArea() {
-
-    }
-
-    void searchByVaccine() {
-
-    }
-
     public static void main(String[] args) {
         Register_Hospital regH = new Register_Hospital();
         Slots_Available sSlots = new Slots_Available();
