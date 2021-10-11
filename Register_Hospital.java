@@ -6,7 +6,7 @@ public class Register_Hospital {
 
     String hospitalName;
     int hPincode;
-    int uniqueId;
+    static int uniqueID = 0;
 
     String maphName;
     String mapuniqueID;
@@ -41,16 +41,14 @@ public class Register_Hospital {
             count = Integer.toString(hPincode);
         } while (count.length() != 6);
 
-        int Pincode = 0;
-
         for (int j = 1; j <= hName.size(); j++) {
-            Pincode = hPincode + (j + i);
+            uniqueID = hPincode + (j + i);
         }
 
         maphPincode = maphName + "pincode";
         hDetails.put(maphPincode, hPincode);
         mapuniqueID = maphName + "uniqueID";
-        hDetails.put(mapuniqueID, Pincode);
+        hDetails.put(mapuniqueID, uniqueID);
 
     }
 

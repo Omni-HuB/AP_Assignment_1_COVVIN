@@ -8,7 +8,7 @@ public class Add_Vaccine {
     int totalDosesRequired;
     int gap;
     static int i;
-    String mapvName;
+    static String mapvName;
     String mapnDoses;
     String mapgDoses;
     Scanner sc = new Scanner(System.in);

@@ -60,6 +60,33 @@ public class run {
                     System.out.println(Register_Hospital.hDetails.entrySet());
                     break;
 
+                case 3:
+                    // Citizen Registration
+
+                    Register_Citizen regC = new Register_Citizen();
+                    regC.addCitizenName();
+                    regC.addCitizenID();
+                    regC.addCitizenAge();
+
+                    System.out.println("Citizen Name :" + regC.citizenName + "," + "Citizen Age :" + regC.citizenAge
+                            + "," + "Unique ID :" + Register_Citizen.cDetails.get(regC.mapCitizenID));
+
+                    System.out.print(Register_Citizen.cName.entrySet() + " ,");
+                    System.out.println(Register_Citizen.cDetails.entrySet());
+                    break;
+
+                case 4:
+                    // creating slots for vccine
+                    Create_slots crtS = new Create_slots();
+                    crtS.addHospitalID();
+                    crtS.addSlots();
+                    crtS.forSlots();
+
+                    break;
+
+                case 5:
+                    // booking a slot
+
                 case 8:
 
                     System.out.print("Exiting COVIN Programme..................\n");
