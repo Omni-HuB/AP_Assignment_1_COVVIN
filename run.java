@@ -4,7 +4,7 @@ import java.util.*;
 
 public class run {
     public static void main(String[] args) {
-        System.out.println("CoVVin Portal Initialiased..........");
+        System.out.println("\n\nCoVVin Portal Initialiased..........");
         for (int i = 0; i <= 20; i++) {
             System.out.print("-");
         }
@@ -25,6 +25,7 @@ public class run {
         Integer selectedOption = 0;
 
         while (selectedOption != 8) {
+            System.out.println("\nSelect { MENU } Options.....");
             selectedOption = sc.nextInt();
 
             switch (selectedOption) {
@@ -35,27 +36,33 @@ public class run {
                     Add_Vaccine ac = new Add_Vaccine();
 
                     ac.vaccineName();
-                    ac.gapBetweenDoses();
                     ac.totalDosesRequired();
-                    System.out.println("Vaccine Name : " + ac.vaccineDetails.get("Vaccine Name") + ","
-                            + " Number of doses : " + ac.dosesDetails.get("Number of doses") + ","
-                            + " Gap Between doses : " + ac.dosesDetails.get("Gap between doses"));
+                    ac.gapBetweenDoses();
+                    System.out.println("Vaccine Name : " + Add_Vaccine.vaccineDetails.get(ac.mapvName) + ","
+                            + " Number of doses : " + Add_Vaccine.dosesDetails.get(ac.mapnDoses) + ","
+                            + " Gap Between doses : " + Add_Vaccine.dosesDetails.get(ac.mapgDoses));
+
+                    System.out.print(Add_Vaccine.dosesDetails.entrySet() + " ,");
+                    System.out.println(Add_Vaccine.vaccineDetails.entrySet());
                     break;
 
                 case 2:
                     // hospital Registration
 
-                    // Register_Hospital regH = new Register_Hospital();
-                    // String hName = regH.hospitalName();
-                    // int hPincode = regH.hospitalPincode();
+                    Register_Hospital regH = new Register_Hospital();
+                    regH.hospitalName();
+                    regH.hospitalPincode();
 
-                    // System.out.println("Hospital Name :" + hName + "," + "Hospital Pincode :" +
-                    // hPincode + ","
-                    // + "Unique ID :" + hUniqueId);
+                    System.out.println("Hospital Name :" + regH.hospitalName + "," + "Hospital Pincode :"
+                            + regH.hPincode + "," + "Unique ID :" + Register_Hospital.hDetails.get(regH.mapuniqueID));
+
+                    System.out.print(Register_Hospital.hName.entrySet() + " ,");
+                    System.out.println(Register_Hospital.hDetails.entrySet());
+                    break;
 
                 case 8:
 
-                    System.out.print("Exiting COVIN Programme..................");
+                    System.out.print("Exiting COVIN Programme..................\n");
                     break;
 
                 default:
